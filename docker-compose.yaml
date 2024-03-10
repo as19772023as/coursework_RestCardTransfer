@@ -1,0 +1,9 @@
+version: '1'
+
+services:
+  app1:
+    image: 'myapp_cours'
+    container_name: 'appcours'
+    ports:
+      - '5500:5500'
+
