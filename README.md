@@ -40,7 +40,7 @@ FRONT доступен по адресу https://github.com/serp-ya/card-transfe
 
 
 #### Для запуска приложения с использованием Docker необходимо:
-1. склонировать репозиторий,
+1. По адресу https://hub.docker.com  склонировать репозиторий по имени andrey555/myapp_cours1,
 2. в директории  выполнить команды (mvn clean),
 3. затем по очереди (mvn package)  (-Dmaven.test.skip),
 4. docker compose build.
