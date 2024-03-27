@@ -41,8 +41,8 @@ class CourseworkRestCardTransferApplicationTests {
             new TransferAmount(5000, "RUR"));
     public static final ConfirmOperationModel CONFIRM_OPERATION_REQUEST =
             new ConfirmOperationModel(OPERATION_ID, CODE);
-    @Container
-    private final static GenericContainer<?> container = new GenericContainer<>("myapp_cours:1.0").
+    @Container //static
+    private final static GenericContainer<?> container = new GenericContainer<>("andrey555/myapp_cours1").
             withExposedPorts(PORT);
 
     @BeforeAll
@@ -65,8 +65,8 @@ class CourseworkRestCardTransferApplicationTests {
     @DisplayName("Тест на возвращаемый ответ  REST-SERVICE  метод postTransfer() №2")
     @Test
     void contextLoadsTestTwo() {
-        TransferResponse transferResponse = new TransferResponse("1");
-        String expected = "{\"operationId\":\"1\"}";
+        TransferResponse transferResponse = new TransferResponse("2");
+        String expected = "{\"operationId\":\"2\"}";
 
         ResponseEntity<String> actual = restTemplate.postForEntity(HOST +
                 portRandom + ENDPOINT_TRANSFER, transferResponse, String.class);

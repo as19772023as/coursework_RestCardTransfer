@@ -20,7 +20,7 @@ class TransferServiceTest {
     private TransferRepository repository;
     private static long suiteStartTime;
     private long testStartTime;
-    public static final String OPERATION_ID = "1";
+    public static final String OPERATION_ID = "2";
     private static final String CODE = "6765";
     public static final TransferModel TRANSFER_REQUEST = new TransferModel(
             "1111111111111111",
@@ -65,7 +65,7 @@ class TransferServiceTest {
     @DisplayName("Тест на получения кода подтверждения и id")
     @Test
     void confirmOperation() {
-        repository.addTransfer("1", TRANSFER_REQUEST);
+        repository.addTransfer("2", TRANSFER_REQUEST);
         TransferResponse expected = new TransferResponse(OPERATION_ID);
 
         TransferResponse actual = service.postConfirmOperation(CONFIRM_OPERATION_REQUEST);

@@ -49,8 +49,8 @@ class TransferControllerTest {
                 .andExpect(status().isOk())
                 .andDo(print());
     }
-
-    //    @DisplayName("Тест на запрос перевода, статус: 400 BadRequest")
+    //400 выкидывае в другом классе, где идет проверка валидности данных
+//    @DisplayName("Тест на запрос перевода, статус: 400 BadRequest")
 //    @Test
 //    public void testAddShouldReturn400BadRequest() throws Exception {
 //        TransferModel model = new TransferModel(" ",
@@ -65,6 +65,7 @@ class TransferControllerTest {
 //                .andExpect(status().isBadRequest())
 //                .andDo(print());
 //    }
+
     @DisplayName("Тест, метод должен быть вызван ровно один раз")
     @Test
     void servicePostTransferTestMustOneTime() throws Exception {
